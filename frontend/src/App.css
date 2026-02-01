@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
+.App {
+  background: #ffffffcc; /* Slight transparency */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 50px 60px;
+  border-radius: 25px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+  border: 2px solid #2e7d32;
+}
+
+/* Heading */
+h1 {
+  color: #2e7d32;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Input Box */
+input[type="text"] {
+  padding: 15px 20px;
+  width: 70%;
+  border-radius: 25px;
+  border: 2px solid #2e7d32;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #1b5e20;
+  box-shadow: 0 0 10px #1b5e20;
+}
+
+/* Button */
+button {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #1b5e20, #43a047);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Answer Box */
+.answer {
+  margin-top: 35px;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 25px;
+  font-size: 1.15rem;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Add AI Icon in answer box */
+.answer::before {
+  content: "🤖 ";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hover effect for answer */
+.answer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+}
+
+/* Form Container */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
